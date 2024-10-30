@@ -1,4 +1,4 @@
-<header class="header">
+<header  class="header">
   <a href="/" class="header__logo">BlogLog</a>
 
   <nav class="header__nav">
@@ -12,11 +12,10 @@
       <li>
         <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a>
       </li>
-    <li>
+      <li>
         <a href="/add-post" class="<%= isActiveRoute('/admin', currentRoute) %>">Post</a>
       </li>
     </ul>
-
   </nav>
 
   <div class="header__button">
@@ -28,20 +27,18 @@
       </svg>
     </button>
     
-      
-      <% if (locals.user) { %>
-        <button id="LogIn"><a style="text-decoration: none;" href="/logout">Log Out</a></button>
-      <% } else { %>
-        <button id="LogIn" onclick="window.location.href = '/admin'">Log In</button>
-      <% } %>
-      
-       <!-- Dark Mode Toggle Button -->
-      <button id="dark-mode-toggle" style="margin-left: 0.5rem;">
-        <i class="fa-solid" id="dark-icon"></i>
-      </button>
-   
-
+    <% if (locals.user) { %>
+      <button id="LogIn"><a style="text-decoration: none;" href="/logout">Log Out</a></button>
+    <% } else { %>
+      <button id="LogIn" onclick="window.location.href = '/admin'">Log In</button>
+    <% } %>
+    
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" style="margin-left: 0.5rem; margin-right: 50px;">
+      <i class="fa-solid" id="dark-icon"></i>
+    </button>
   </div>
-
 </header>
 
+<!-- Add this div right after the header to prevent content from being hidden -->
+<div style="padding-top: 60px;"></div>

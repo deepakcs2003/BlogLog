@@ -3,22 +3,13 @@
 
   <nav class="header__nav">
     <ul>
-      <li>
-        <a href="/" class="">Home</a>
-      </li>
-      <li>
-        <a href="/about" class="">About</a>
-      </li>
-      <li>
-        <a href="/contact" class="">Contact</a>
-      </li>
+      <li><a href="/" class="">Home</a></li>
+      <li><a href="/about" class="">About</a></li>
+      <li><a href="/contact" class="">Contact</a></li>
     </ul>
-
-  </nav>
-  <% if (locals.user) { %>
-
-    <a style="text-decoration: none;" href="/logout">Log Out</a>
-
+    <% if (locals.user) { %>
+      <a style="text-decoration: none; margin-right: 20px;" href="/logout">Log Out</a>
     <% } %>
-
+  </nav>
+ 
 </header>
